@@ -1,0 +1,79 @@
+.header{
+    background-color: #fff;
+    //Nav with logo and menu
+    nav{
+        padding: 40px 0;
+        .logo{
+            flex-basis: 50%;
+        }
+        .menu{
+            /*flex-basis: 40%;
+            justify-content: space-between;*/
+            a{
+                text-decoration: none;
+                color: $veryDarkBlue;
+                text-transform: uppercase;
+                padding: 8px 20px;
+                @include prefex(transition, .3s ease);
+                    &:not(:first-child){
+                        margin-left: 15px;
+                    }
+                &:last-child{
+                    background-color: $softRed;
+                    color: #fff;
+                    border-radius: 5px;
+                    border: 1px solid $softRed;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        color: $softRed;
+                        background: transparent;
+                        border: 1px solid $softRed;
+                    }
+                }
+                &:hover{
+                    color: $softRed;
+                }
+            }
+        }
+        .hamburgerMenu{
+            cursor: pointer;
+            display: none;
+            &-open{
+                span:first-child{
+                    transform: rotate(45deg);
+                }
+                span:nth-child(2){
+                    opacity: 0;
+                }
+                span:last-child{
+                    transform: rotate(-45deg);
+                }
+            }
+            span{
+                display: block;
+                width: 20px;
+                height: 3px;
+                background-color: $grayishBlue;
+                transform-origin: 3px 1px;
+                &:not(:last-child){
+                    margin-bottom: 3px;
+                }
+                @include prefex(transition, all .3s ease-in-out)
+            }
+        }
+    }
+}
+
+///responsive 
+@media (max-width: 767px){
+    .header{
+        nav{
+            .menu{
+                display: none;
+            }
+            .hamburgerMenu{
+                display: block;
+            }
+        }
+    }
+}

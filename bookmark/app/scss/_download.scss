@@ -1,0 +1,107 @@
+.download{
+    .download-heading{
+        margin-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        text-align: center;
+        h3{
+            font-weight: 500;
+            font-size: 40px;
+            color: $veryDarkBlue;
+            margin-bottom: 20px;
+        }
+        p{
+            color: $grayishBlue;
+            font-size: $mdFontSize;
+        }
+    }
+    .download-container{
+        width: 100%;
+        margin-top: 50px;
+        .download-options{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            .download-option{
+                flex-basis: 30%;
+                background-color: #fff;
+                border-radius: 10px;
+                text-align: center;
+                padding: 30px 10px 20px;
+                box-shadow: 10px 10px 20px #9194a11c,
+                -10px -0px 20px #9194a11c;
+                img{
+                    width: 30%;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+                p:nth-child(2){
+                    color: $veryDarkBlue;
+                    font-size: $mdFontSize;
+                    margin-bottom: 10px;
+                }
+                p:nth-child(3){
+                    color: $grayishBlue;
+                    font-size: $smFontSize;
+                    margin-bottom: 20px;
+                }
+                button{
+                    background-color: $softBlue;
+                    color: #fff;
+                    width: 80%;
+                    padding: 15px;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        background-color: transparent;
+                        border: 1px solid $softBlue;
+                        color: $softBlue;
+                    }
+                }
+            }
+        }
+        .download-option:nth-child(2){
+            position: relative;
+            top: 30px;
+        }
+        .download-option:nth-child(3){
+            position: relative;
+            top: 60px;
+        }
+    }
+}
+
+//responsive
+@media (max-width: 767px){
+    .download{
+        .download-heading{
+            margin-top: 140px;
+            width: 80%;
+            text-align: center;
+            h3{
+                font-size: 25px;
+            }
+            p{
+                font-size: $smFontSize;
+            }
+        }
+        .download-container{
+            .download-options{
+                .download-option{
+                    flex-basis: 100%;
+                    img{
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}

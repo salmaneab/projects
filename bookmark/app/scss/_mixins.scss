@@ -1,0 +1,8 @@
+//prefex generator
+@mixin prefex($prop, $val){
+    -moz-#{$prop}: $val;
+    -webkit-#{$prop}: $val;
+    -o-#{$prop}: $val;
+    -ms-#{$prop}: $val;
+    #{$prop}: $val;
+}

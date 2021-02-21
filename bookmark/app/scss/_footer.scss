@@ -1,0 +1,81 @@
+.footer{
+    background-color: $veryDarkBlue;
+    padding: 30px 0;
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .logo-links{
+            flex-basis: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            .logo{
+                margin-right: 7%;
+            }
+            .links{
+                display: flex;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: $smFontSize;
+                    transition: .2s ease-in-out;
+                    &:not(:first-child){
+                        margin-left: 20px;
+                    }
+                    &:hover{
+                        color: $softRed;
+                    }
+                }
+            }
+        }
+        .icons-links{
+            img{
+                cursor: pointer;
+                &:last-child{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+//responsive
+@media (max-width: 767px){
+    .footer{
+        .footer-container{
+            .logo-links{
+                flex-basis: 100%;
+                .logo{
+                    flex-basis: 100%;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    img{
+                        margin-left: 25px;
+                    }
+                }
+                .links{
+                    flex-basis: 100%;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        &:not(:first-child){
+                            margin-left: 0px;
+                        }
+                        &:not(:last-child){
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .icons-links{
+                margin-top: 30px;
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
