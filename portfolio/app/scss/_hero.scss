@@ -1,0 +1,106 @@
+.hero{
+    width: 100%;
+    height: 700px;
+    background-color: $hardDark;
+    position: relative;
+    .menu-background{
+        position: absolute;
+        width: 600px;
+        top: -4px;
+        right: 0;
+    }
+    .resume-background{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .hero-content{
+        margin-top: 100px;
+        .hero-content-container{
+            display: flex;
+            flex-wrap: wrap;
+            .hero-content-content{
+                flex-basis: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .hero-content-content-container{
+                    p:nth-child(1){
+                        color: $white;
+                        font-size: $mdFontSize;
+                        margin-bottom: 10px;
+                        span{
+                            color: $lightYellow;
+                        }
+                    }
+                    p:nth-child(2){
+                        color: $white;
+                        font-size: $mdHeading;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                    }
+                    p:nth-child(3){
+                        width: 80px;
+                        height: 3px;
+                        background-color: $lightYellow;
+                        margin-bottom: 10px;
+                    }
+                    p:nth-child(4){
+                        color: $grey;
+                        font-size: $smFontSize;
+                    }
+                }
+            }
+            .hero-content-image{
+                flex-basis: 50%;
+                display: flex;
+                align-items: center;
+                .hero-content-image-container{
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    img{
+                        width: 330px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .hero{
+        .menu-background{
+            width: 300px;
+        }
+        height: auto;
+        .hero-content{
+            margin-top: 50px;
+            .hero-content-container{
+                .hero-content-content{
+                    flex-basis: 100%;
+                    margin-bottom: 60px;
+                    .hero-content-content-container{
+                        text-align: center;
+                        p:nth-child(1){
+                            font-size: 16px;
+                        }
+                        p:nth-child(2){
+                            font-size: $smHeading;
+                        }
+                    }
+                }
+                .hero-content-image{
+                    flex-basis: 100%;
+                    margin-bottom: 100px;
+                    .hero-content-image-container{
+                        img{
+                            width: 280px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.footer{
+    width: 100%;
+    padding: 20px 0;
+    background-color: $softDark;
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            text-decoration: none;
+            color: $lightYellow;
+            font-weight: 600;
+            font-size: $smFontSize;
+        }
+        .links{
+            a{
+                color: $white;
+            text-decoration: none;
+            font-size: $smFontSize;
+            transition: .2s ease-in-out;
+            font-weight: 600;
+            position: relative;
+            &:hover{
+                color: $lightYellow;
+                &::after{
+                    width: 100%;
+                }
+            }
+            &:not(:first-child){
+                margin-left: 20px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0;
+                height: 3px;
+                background-color: $lightYellow;
+                transition: .2s ease-in-out;
+            }
+            }
+        }
+        .ico{
+            i{
+                color: $white;
+                cursor: pointer;
+                font-size: $smHeading;
+                &:not(:first-child){
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+//responsive
+@media (max-width: 767px){
+    .footer{
+        .footer-container{
+            flex-wrap: wrap;
+            text-align: center;
+            .logo{
+                flex-basis: 100%;
+                margin-bottom: 10px;
+            }
+            .links{
+                flex-basis: 100%;
+                margin-bottom: 10px;
+                a{
+                    display: block;
+                    &:not(:first-child){
+                        margin-left: 0;
+                        margin-top: 5px;
+                    }
+                    &:hover{
+                        &::after{
+                            width: 0;
+                        }
+                    }
+                }
+            }
+            .ico{
+                flex-basis: 100%;
+            }
+        }
+    }
+}

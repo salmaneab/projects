@@ -1,0 +1,171 @@
+.resume{
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    .resume-container{
+        width: 100%;
+        padding: 50px 0;
+        transform: skewY(-5deg);
+        box-shadow: 0px 5px 20px $darkYellow,
+        0px -5px 20px $darkYellow;
+        .resume-container-abs{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            transform: skewY(5deg);
+
+            //Work Experience
+            .work-experience{
+                flex-basis: 40%;
+                position: relative;
+                padding: 20px 20px 20px 40px ;
+                border-radius: 10px;
+    
+                &::after{
+                    content: "";
+                    width: 2px;
+                    height: 95%;
+                    background-color: $lightYellow;
+                    position: absolute;
+                    left: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 1px;
+                }
+                h1{
+                    color: $grey;
+                    font-size: $smHeading;
+                    margin-bottom: 10px;
+                }
+                .item{
+                    background-color: $softDark;
+                    padding: 20px;
+                    box-shadow: 5px 5px 20px rgba(0,0,0,.56);
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                    h1{
+                        color: $white;
+                        font-size: $mdFontSize;
+                        margin-bottom: 5px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $lightYellow;
+                            position: absolute;
+                            left: -44px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    span{
+                        color: $grey;
+                        font-size: $smFontSize;
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+                    h3{
+                        color: $white;
+                        font-size: $smFontSize;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        font-size: $smFontSize;
+                        color: $grey;
+                    }
+                }
+            }
+
+            //Education
+            .education{
+                margin-left: 50px;
+                flex-basis: 40%;
+                position: relative;
+                padding: 20px 20px 20px 40px ;
+                border-radius: 10px;
+    
+                &::after{
+                    content: "";
+                    width: 2px;
+                    height: 95%;
+                    background-color: $lightYellow;
+                    position: absolute;
+                    left: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 1px;
+                }
+                h1{
+                    color: $grey;
+                    font-size: $smHeading;
+                    margin-bottom: 10px;
+                }
+                .item{
+                    background-color: $softDark;
+                    padding: 20px;
+                    box-shadow: 5px 5px 20px rgba(0,0,0,.56);
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                    h1{
+                        color: $white;
+                        font-size: $mdFontSize;
+                        margin-bottom: 5px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $lightYellow;
+                            position: absolute;
+                            left: -44px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    span{
+                        color: $grey;
+                        font-size: $smFontSize;
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+                    h3{
+                        color: $white;
+                        font-size: $smFontSize;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        font-size: $smFontSize;
+                        color: $grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsive
+
+@media (max-width: 767px){
+    .resume{
+        .resume-container{
+            .resume-container-abs{
+                flex-wrap: wrap;
+                .work-experience{
+                    flex-basis: 100%;
+                    margin-bottom: 20px;
+                }
+                .education{
+                    flex-basis: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

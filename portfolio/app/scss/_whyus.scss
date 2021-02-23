@@ -1,0 +1,49 @@
+.whyus{
+    margin-top: 100px;
+    width: 100%;
+    .whyus-container{
+        display: flex;
+        justify-content: space-between;
+        .item{
+            text-align: center;
+            flex-basis: 30%;
+            background-color: $softDark;
+            padding: 20px;
+            border-radius: 10px;
+            img{
+                width: 60px;
+                margin-bottom: 10px;
+            }
+            p:nth-child(2){
+                color: $white;
+                font-weight: 500;
+                font-size: $smHeading;
+                margin-bottom: 10px;
+            }
+            p:nth-child(3){
+                color: $grey;
+                font-size: $smFontSize;
+            }
+        }
+    }
+}
+
+//responsive
+
+@media (max-width: 767px){
+    .whyus{
+        margin-top: 50px;
+        .whyus-container{
+            flex-wrap: wrap;
+            .item{
+                flex-basis: 100%;
+                img{
+                    width: 40px;
+                }
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
