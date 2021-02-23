@@ -32,6 +32,45 @@ body {
   clear: both;
 }
 
+.mobile-menu {
+  position: fixed;
+  left: -50%;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  opacity: 0;
+  z-index: 1000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
+  background: linear-gradient(#000, transparent);
+  text-align: center;
+  padding: 20px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.mobile-menu a {
+  display: block;
+  text-decoration: none;
+  color: #e8e6e3;
+  padding: 10px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  border-radius: 10px;
+}
+
+.mobile-menu a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.mobile-menu a:hover {
+  color: #a29bfe;
+}
+
+.mobile-menu-active {
+  left: 0;
+  opacity: 1;
+}
+
 .heading {
   width: 100%;
   margin-bottom: 80px;
