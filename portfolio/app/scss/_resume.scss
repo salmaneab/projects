@@ -40,6 +40,7 @@
                 .item{
                     background-color: $softDark;
                     padding: 20px;
+                    border-radius: 10px;
                     box-shadow: 5px 5px 20px rgba(0,0,0,.56);
                     &:not(:last-child){
                         margin-bottom: 20px;
@@ -107,6 +108,7 @@
                 .item{
                     background-color: $softDark;
                     padding: 20px;
+                    border-radius: 10px;
                     box-shadow: 5px 5px 20px rgba(0,0,0,.56);
                     &:not(:last-child){
                         margin-bottom: 20px;
@@ -152,7 +154,7 @@
 
 //responsive
 
-@media (max-width: 767px){
+@media (max-width: 768px){
     .resume{
         .resume-container{
             .resume-container-abs{

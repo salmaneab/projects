@@ -11,6 +11,9 @@
             &:not(:first-child){
                 background-color: $hardDark;
             }
+            &:first-child{
+                background-color: $softDark;
+            }
             h3{
                 color: $white;
                 font-size: $smHeading;
@@ -30,7 +33,7 @@
 }
 
 //responsive
-@media (max-width: 767px){
+@media (max-width: 768px){
     .services{
         .services-container{
             flex-wrap: wrap;

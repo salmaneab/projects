@@ -12,6 +12,7 @@
             font-size: $smFontSize;
         }
         .links{
+            align-items: center;
             a{
                 color: $white;
             text-decoration: none;
@@ -41,12 +42,15 @@
             }
         }
         .ico{
-            i{
+            a{
+                text-decoration: none;
                 color: $white;
-                cursor: pointer;
-                font-size: $smHeading;
+                i{
+                    cursor: pointer;
+                    font-size: $smHeading;
+                }
                 &:not(:first-child){
-                    margin-left: 20px;
+                    margin-left: 10px;
                 }
             }
         }
@@ -55,7 +59,7 @@
 
 
 //responsive
-@media (max-width: 767px){
+@media (max-width: 768px){
     .footer{
         .footer-container{
             flex-wrap: wrap;

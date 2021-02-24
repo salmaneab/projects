@@ -8,6 +8,10 @@
 }
 
 html {
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 
@@ -40,9 +44,8 @@ body {
   height: 100vh;
   opacity: 0;
   z-index: 1000;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
-  background: linear-gradient(#000, transparent);
-  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#202a36), to(transparent));
+  background: linear-gradient(#202a36, transparent);
   padding: 20px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
@@ -51,19 +54,23 @@ body {
 .mobile-menu a {
   display: block;
   text-decoration: none;
+  text-align: center;
   color: #e8e6e3;
-  padding: 10px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
-  border-radius: 10px;
+  padding: 20px 0;
 }
 
 .mobile-menu a:not(:last-child) {
   margin-bottom: 20px;
 }
 
+.mobile-menu a i {
+  margin-right: 10px;
+}
+
 .mobile-menu a:hover {
-  color: #a29bfe;
+  color: #6c5ce7;
 }
 
 .mobile-menu-active {
@@ -214,12 +221,12 @@ body {
   width: 330px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero {
     height: auto;
   }
   .hero .menu-background {
-    width: 300px;
+    width: 280px;
   }
   .hero .hero-content {
     margin-top: 50px;
@@ -345,7 +352,7 @@ body {
           transform: rotate(-45deg);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header {
     padding: 20px 0;
   }
@@ -397,7 +404,7 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .whyus {
     margin-top: 50px;
   }
@@ -474,6 +481,7 @@ body {
 .resume .resume-container .resume-container-abs .work-experience .item {
   background-color: #202a36;
   padding: 20px;
+  border-radius: 10px;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
 }
@@ -552,6 +560,7 @@ body {
 .resume .resume-container .resume-container-abs .education .item {
   background-color: #202a36;
   padding: 20px;
+  border-radius: 10px;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
 }
@@ -599,7 +608,7 @@ body {
   color: #c8c3bc;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .resume .resume-container .resume-container-abs {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -642,6 +651,10 @@ body {
   background-color: #161d27;
 }
 
+.services .services-container .item:first-child {
+  background-color: #202a36;
+}
+
 .services .services-container .item h3 {
   color: #e8e6e3;
   font-size: 25px;
@@ -658,7 +671,7 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .services .services-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -704,6 +717,7 @@ body {
   background-color: #202a36;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
+  border-radius: 10px;
 }
 
 .portfolio .portfolio-container .portfolio-container-content .item .portfolio-container-content-header {
@@ -732,7 +746,7 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .portfolio .portfolio-container .portfolio-container-content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -779,8 +793,8 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   border: none;
-  border: 2px solid #c8c3bc;
-  color: #c8c3bc;
+  border: 2px solid #e8e6e3;
+  color: #e8e6e3;
   padding: 20px;
 }
 
@@ -838,7 +852,7 @@ body {
   color: #e8e6e3;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .contact .contact-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -876,6 +890,12 @@ body {
   font-size: 14px;
 }
 
+.footer .footer-container .links {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .footer .footer-container .links a {
   color: #e8e6e3;
   text-decoration: none;
@@ -910,17 +930,21 @@ body {
   transition: .2s ease-in-out;
 }
 
-.footer .footer-container .ico i {
+.footer .footer-container .ico a {
+  text-decoration: none;
   color: #e8e6e3;
+}
+
+.footer .footer-container .ico a i {
   cursor: pointer;
   font-size: 25px;
 }
 
-.footer .footer-container .ico i:not(:first-child) {
-  margin-left: 20px;
+.footer .footer-container .ico a:not(:first-child) {
+  margin-left: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer .footer-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
