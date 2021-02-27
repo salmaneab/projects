@@ -709,6 +709,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio .portfolio-container .portfolio-container-content .item {
@@ -718,6 +720,10 @@ body {
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
   border-radius: 10px;
+}
+
+.portfolio .portfolio-container .portfolio-container-content .item:not(.first) {
+  margin-top: 20px;
 }
 
 .portfolio .portfolio-container .portfolio-container-content .item .portfolio-container-content-header {
@@ -754,7 +760,9 @@ body {
   .portfolio .portfolio-container .portfolio-container-content .item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    margin-bottom: 20px;
+  }
+  .portfolio .portfolio-container .portfolio-container-content .item:not(:first-child) {
+    margin-top: 20px;
   }
 }
 
