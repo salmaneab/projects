@@ -21,7 +21,6 @@ body {
   font-weight: 400;
   background-color: #161d27;
   line-height: 1.4;
-  height: 4000px;
 }
 
 .container {
@@ -703,19 +702,14 @@ body {
   width: 100%;
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .portfolio .portfolio-container .portfolio-container-content .item {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
   background-color: #202a36;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.56);
@@ -754,15 +748,8 @@ body {
 
 @media (max-width: 768px) {
   .portfolio .portfolio-container .portfolio-container-content {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .portfolio .portfolio-container .portfolio-container-content .item {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .portfolio .portfolio-container .portfolio-container-content .item:not(:first-child) {
-    margin-top: 20px;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
