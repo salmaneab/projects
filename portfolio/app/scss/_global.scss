@@ -35,24 +35,33 @@ body{
     height: 100vh;
     opacity: 0;
     z-index: 1000;
-    background: linear-gradient($softDark, transparent);
-    padding: 20px;
+    background: $softDark;
     transition: .2s ease-in-out;
+    h2{
+        padding: 20px;
+        a{
+            text-decoration: none;
+            color: $lightYellow;
+            font-weight: 600;
+            font-size: $smHeading;
+        }
+    }
     a{
         display: block;
         text-decoration: none;
-        text-align: center;
         color: $white;
         transition: .2s ease-in-out;
-        padding: 20px 0;
+        &:not(:first-child){
+            background-color: $lightYellow;
+            width: 80%;
+            border-radius: 0 10px 10px 0;
+            padding: 10px;
+        }
         &:not(:last-child){
             margin-bottom: 20px;
         }
         i{
             margin-right: 10px;
-        }
-        &:hover{
-            color: $lightYellow;
         }
     }
 }
